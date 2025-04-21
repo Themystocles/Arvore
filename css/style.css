@@ -112,82 +112,52 @@ h1 {
     display: block;
 }
 
-@media (max-width: 1200px) {
-    .tree-container {
-        min-width: 1200px;
-    }
-
-    .branch {
-        gap: 20px;
-    }
-
-    .generation {
-        gap: 15px;
-    }
-
-    .person {
-        width: 130px;
-    }
-
-    .person img {
-        height: 120px;
-    }
-}
-
 @media (max-width: 768px) {
-    .tree-container {
-        min-width: 1000px;
-    }
-
-    .branch {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .generation {
-        min-width: 100px;
-        gap: 10px;
+    .center {
+        width: auto;
+        /* Permite que a largura se ajuste de acordo com o conteúdo */
+        margin-top: 0;
+        /* Remover a margem negativa */
+        padding: 0;
+        /* Garante que o padding não distorça o layout */
     }
 
     .person {
-        width: 120px;
+        width: 100%;
+        /* Ajusta a largura para ocupar a tela inteira */
         font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .person img {
-        height: 100px;
-    }
-
-    .center .person {
-        font-size: 14px;
+        width: 80%;
+        /* A imagem ficará responsiva e não estourará a tela */
+        height: auto;
+        /* Mantém a proporção da imagem */
     }
 }
 
 @media (max-width: 480px) {
-    .tree-container {
-        min-width: 600px;
-    }
-
-    .branch {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .generation {
-        min-width: 80px;
-        gap: 5px;
+    .center {
+        width: auto;
+        /* Ajusta para ocupar o tamanho necessário */
+        margin-top: 0;
     }
 
     .person {
-        width: 100px;
+        width: 100%;
         font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .person img {
-        height: 80px;
-    }
-
-    .center .person {
-        font-size: 12px;
+        width: 80%;
+        height: auto;
     }
 }
