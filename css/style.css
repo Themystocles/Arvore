@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f2f5;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.tree-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: nowrap;
+    min-width: 2200px;
+    /* novo: aumenta a área mínima */
+}
+
+.branch {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.branch.reverse {
+    flex-direction: row-reverse;
+}
+
+.generation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 140px;
+}
+
+.generation-title {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.person {
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 14px;
+    min-width: 120px;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: 150px;
+    /* Ajuste para manter o tamanho fixo */
+}
+
+.person:hover {
+    background-color: #e6f3ff;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* centraliza na vertical */
+    height: 230vh;
+    /* ocupa 100% da altura da tela */
+}
+
+.center .person {
+    background-color: #d1ffd1;
+    font-weight: bold;
+}
+
+.person img {
+    width: 100%;
+    height: 140px;
+    /* Aumentado de 100px para 140px */
+    object-fit: cover;
+    /* A imagem cobre todo o espaço sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.person span {
+    font-weight: 500;
+    display: block;
+}
