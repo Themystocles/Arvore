@@ -7,6 +7,7 @@ const stepY = 84;
 const cardWidth = 90;
 const cardHeight = 78;
 let family;
+let canEdit = false;
 let editingId = null;
 let pendingPhoto = null;
 let nodePositions = new Map();
@@ -234,14 +235,27 @@ function openEditor(personId) {
     const person = family.people[personId];
     const image = editor.querySelector(".lightbox-image");
     const placeholder = editor.querySelector(".editor-placeholder");
+    const photoPicker = editor.querySelector(".editor-portrait-button");
 
     editor.querySelector(".editor-role").textContent = person.role;
-    editor.querySelector("#editor-title").textContent = person.name || `Adicionar ${person.role.toLowerCase()}`;
+    editor.querySelector("#editor-title").textContent = person.name || (canEdit ? `Adicionar ${person.role.toLowerCase()}` : person.role);
     editor.querySelector(".editor-name").value = person.name || "";
     editor.querySelector(".editor-description").value = person.description || "";
     editor.querySelector(".editor-status").textContent = "";
     editor.querySelector(".editor-file").value = "";
+    editor.querySelector(".editor-name").readOnly = !canEdit;
+    editor.querySelector(".editor-description").readOnly = !canEdit;
+    editor.querySelector(".editor-file").disabled = !canEdit;
+    photoPicker.disabled = !canEdit;
     editor.querySelector(".remove-photo").hidden = !person.photo;
+    editor.querySelector(".editor-upload").hidden = !canEdit;
+    editor.querySelector(".save-person").hidden = !canEdit;
+    editor.querySelector(".editor-name").readOnly = !canEdit;
+    editor.querySelector(".editor-description").readOnly = !canEdit;
+    if (!canEdit) {
+        editor.querySelector(".remove-photo").hidden = true;
+        editor.querySelector(".editor-status").textContent = "Perfil publicado para consulta.";
+    }
     image.hidden = !person.photo;
     placeholder.hidden = Boolean(person.photo);
     if (person.photo) image.src = person.photo;
@@ -261,6 +275,10 @@ function previewPhoto(file) {
 
 async function savePerson(removePhoto = false) {
     if (!editingId) return;
+    if (!canEdit) {
+        editor.querySelector(".editor-status").textContent = "Edições disponíveis somente no servidor local.";
+        return;
+    }
     const saveButton = editor.querySelector(".save-person");
     const body = new FormData();
     body.set("name", editor.querySelector(".editor-name").value.trim());
@@ -289,20 +307,31 @@ async function savePerson(removePhoto = false) {
     }
 }
 
-function loadFamily() {
-    fetch("/api/family", { cache: "no-store" })
-        .then((response) => {
-            if (!response.ok) throw new Error("Não foi possível carregar a árvore.");
-            return response.json();
-        })
-        .then((data) => {
-            family = data;
+async function loadFamily() {
+    try {
+        const apiUrl = new URL("api/family", window.location.href);
+        const response = await fetch(apiUrl, { cache: "no-store" });
+        if (!response.ok) throw new Error("API local indisponível");
+
+        family = await response.json();
+        canEdit = true;
+        renderTree();
+        return;
+    } catch {
+        try {
+            const dataUrl = new URL("assets/people.json", document.baseURI);
+            const response = await fetch(dataUrl, { cache: "no-store" });
+            if (!response.ok) throw new Error("Não foi possível carregar assets/people.json.");
+
+            family = await response.json();
+            canEdit = false;
             renderTree();
-        })
-        .catch((error) => {
-            pageStatus.textContent = `${error.message} Abra a página com node server.js para usar o editor local.`;
+            pageStatus.textContent = "Árvore publicada para consulta. Para editar, inicie o servidor local.";
+        } catch (error) {
+            pageStatus.textContent = `${error.message} Confira se assets/people.json está publicado.`;
             pageStatus.classList.add("photo-status--error");
-        });
+        }
+    }
 }
 
 treeRoot.addEventListener("click", (event) => {
@@ -312,6 +341,7 @@ treeRoot.addEventListener("click", (event) => {
 
 editor.addEventListener("click", (event) => {
     const action = event.target.closest("[data-action]")?.dataset.action;
+    if (!canEdit && action) return;
     if (action === "choose-photo") editor.querySelector(".editor-file").click();
     if (action === "save") savePerson();
     if (action === "remove-photo") savePerson(true);

@@ -104,16 +104,16 @@ async function saveFamilyPerson(request, response, personId) {
         const photoFilePath = path.join(photosPath, filename);
         await fs.writeFile(photoFilePath, Buffer.from(await photo.arrayBuffer()));
 
-        if (person.photo && person.photo !== `/assets/photos/${filename}`) {
+        if (person.photo && person.photo !== `assets/photos/${filename}`) {
             const oldFilename = path.basename(person.photo);
-            if (oldFilename === person.photo.slice("/assets/photos/".length)) {
+            if (person.photo.startsWith("/assets/photos/") || person.photo.startsWith("assets/photos/")) {
                 await fs.rm(path.join(photosPath, oldFilename), { force: true });
             }
         }
-        person.photo = `/assets/photos/${filename}`;
+        person.photo = `assets/photos/${filename}`;
     } else if (removePhoto && person.photo) {
         const oldFilename = path.basename(person.photo);
-        if (oldFilename === person.photo.slice("/assets/photos/".length)) {
+        if (person.photo.startsWith("/assets/photos/") || person.photo.startsWith("assets/photos/")) {
             await fs.rm(path.join(photosPath, oldFilename), { force: true });
         }
         person.photo = null;
