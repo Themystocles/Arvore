@@ -1,0 +1,222 @@
+{
+    "child": {
+        "id": "eliza",
+        "parents": [
+            "pai",
+            "mae"
+        ]
+    },
+    "people": {
+        "mae": {
+            "role": "Mãe",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-avo-1",
+                "mae-avo-2"
+            ]
+        },
+        "eliza": {
+            "role": "Filha",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae",
+                "pai"
+            ]
+        },
+        "pai": {
+            "role": "Pai",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "pai-avo-1",
+                "pai-avo-2"
+            ]
+        },
+        "mae-avo-1": {
+            "role": "Avô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-bisavo-1",
+                "mae-bisavo-2"
+            ]
+        },
+        "mae-avo-2": {
+            "role": "Avó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-bisavo-3",
+                "mae-bisavo-4"
+            ]
+        },
+        "pai-avo-1": {
+            "role": "Avô paterno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "pai-bisavo-1",
+                "pai-bisavo-2"
+            ]
+        },
+        "pai-avo-2": {
+            "role": "Avó paterna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "pai-bisavo-3",
+                "pai-bisavo-4"
+            ]
+        },
+        "mae-bisavo-1": {
+            "role": "Bisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-trisavo-1",
+                "mae-trisavo-2"
+            ]
+        },
+        "mae-bisavo-2": {
+            "role": "Bisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-trisavo-3",
+                "mae-trisavo-4"
+            ]
+        },
+        "mae-bisavo-3": {
+            "role": "Bisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-trisavo-5",
+                "mae-trisavo-6"
+            ]
+        },
+        "mae-bisavo-4": {
+            "role": "Bisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-trisavo-7",
+                "mae-trisavo-8"
+            ]
+        },
+        "pai-bisavo-1": {
+            "role": "Bisavô paterno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "pai-bisavo-2": {
+            "role": "Bisavó paterna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "pai-bisavo-3": {
+            "role": "Bisavô paterno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "pai-bisavo-4": {
+            "role": "Bisavó paterna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-1": {
+            "role": "Trisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-2": {
+            "role": "Trisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-3": {
+            "role": "Trisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-4": {
+            "role": "Trisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-5": {
+            "role": "Trisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-6": {
+            "role": "Trisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-7": {
+            "role": "Trisavô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-trisavo-8": {
+            "role": "Trisavó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": [
+                "mae-tetravo-1",
+                "mae-tetravo-alves"
+            ]
+        },
+        "mae-tetravo-1": {
+            "role": "Tetravô materno",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        },
+        "mae-tetravo-alves": {
+            "role": "Tetravó materna",
+            "name": "",
+            "description": "",
+            "photo": null,
+            "parents": []
+        }
+    }
+}

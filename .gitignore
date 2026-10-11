@@ -1,0 +1,3 @@
+assets/family.local.json
+assets/photos/*
+!assets/photos/README.md

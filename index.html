@@ -1,251 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Árvore Genealógica</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8eaf0">
+    <title>Árvore da família | Maria Eliza</title>
+    <link rel="stylesheet" href="css/family-tree.css">
+    <script src="js/family-tree.js" defer></script>
 </head>
 
 <body>
-    <h1>Árvore Genealógica</h1>
-    <div class="scroll-wrapper">
-        <div class="tree-container">
-
-            <!-- Lado esquerdo: Mãe -->
-            <div class="branch reverse">
-                <!-- Geração 2 -->
-                <div class="generation">
-                    <div class="generation-title">Mãe</div>
-                    <div class="person">
-                        <img src="images/Maryanna Silva Holanda.jpg" alt="Mãe" title="Maryanna Silva Holanda Lopes" />
-                        <span>Mãe</span>
-                    </div>
-                </div>
-
-
-                <!-- Geração 3 -->
-                <div class="generation">
-                    <div class="generation-title">Avós (Mãe)</div>
-                    <div class="person">
-                        <img src="images/humberto holanda.jpg" alt="Pai da Mãe">
-                        <span>Pai da Mãe</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/jane holanda.jpg" alt="Mãe da Mãe">
-                        <span>Mãe da Mãe</span>
-                    </div>
-                </div>
-
-                <!-- Geração 4 -->
-                <div class="generation">
-                    <div class="generation-title">Bisavós (Mãe)</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Bisavó 1">
-                        <span>Bisavó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Bisavó 2">
-                        <span>Bisavó 2</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Bisavó 3">
-                        <span>Bisavó 3</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Bisavó 4">
-                        <span>Bisavó 4</span>
-                    </div>
-                </div>
-
-                <!-- Geração 5 -->
-                <div class="generation">
-                    <div class="generation-title">Trisavós (Mãe)</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 1">
-                        <span>Trisavó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 2">
-                        <span>Trisavó 2</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 3">
-                        <span>Trisavó 3</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 4">
-                        <span>Trisavó 4</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 5">
-                        <span>Trisavó 5</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 6">
-                        <span>Trisavó 6</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 7">
-                        <span>Trisavó 7</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 8">
-                        <span>Trisavó 8</span>
-                    </div>
-                </div>
-
-                <!-- Geração 6 -->
-                <div class="generation">
-                    <div class="generation-title">Tetravós (Mãe)</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Tetravó 1">
-                        <span>Tetravó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Tetravó 2">
-                        <span>Tetravó 2</span>
-                    </div>
-                    <div class="person">...</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Tetravó 32">
-                        <span>Tetravó 32</span>
-                    </div>
-                </div>
+    <main class="page">
+        <header class="page-header">
+            <div class="heading-copy">
+                <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✳</span> Um presente para o futuro</p>
+                <h1>As raízes de <span>Eliza.</span></h1>
+                <p class="page-subtitle">Uma história feita de quem veio antes.</p>
             </div>
-
-            <!-- Centro: Você -->
-            <div class="center">
-                <div class="generation-title">Filho</div>
-                <div class="person">
-                    <img src="images/Eliza.jpg" alt="Você">
-                    <span>Maria Eliza</span>
-                </div>
+            <div class="local-note">
+                <span class="local-note-mark" aria-hidden="true">✦</span>
+                <span>Suas edições ficam<br>guardadas neste projeto.</span>
             </div>
+        </header>
 
-            <!-- Lado direito: Pai -->
-            <div class="branch">
-                <!-- Geração 2 -->
-                <div class="generation">
-                    <div class="generation-title">Pai</div>
-                    <div class="person">
-                        <img src="images/Themystocles.jpg" alt="Pai" title="Themystocles Washington Da Motta Lopes">
-                        <span>Themystocles</span>
-                    </div>
-                </div>
+        <section class="tree-viewport" id="tree-viewport" aria-label="Árvore genealógica horizontal de Maria Eliza"
+            tabindex="0">
+            <div class="family-tree" id="family-tree" aria-live="polite"></div>
+        </section>
+        <p class="photo-status" id="photo-status" role="status" aria-live="polite"></p>
+        <footer class="page-footer">
+            <span class="footer-spark" aria-hidden="true">✳</span>
+            <p>Uma família. Muitas raízes. Uma história só.</p>
+            <span class="footer-spark" aria-hidden="true">✳</span>
+        </footer>
+        <p class="photo-credit">Cerejeiras em flor · <a
+                href="https://commons.wikimedia.org/wiki/File:Bonn_cherry_blossoms_Kirschbl%C3%BCten_in_Heerstr.jpg"
+                target="_blank" rel="noreferrer">Spielvogel / Wikimedia Commons (CC0)</a></p>
+    </main>
 
-                <!-- Geração 3 -->
-                <div class="generation">
-                    <div class="generation-title">Avós (Pai)</div>
-                    <div class="person">
-                        <img src="images/Francisco ronaldo Lopes.jpg" alt="Pai do Pai">
-                        <span>Ronaldo Lopes</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/Socorro Mota.jpg" alt="Mãe do Pai">
-                        <span>Socorro Mota</span>
-                    </div>
-                </div>
-
-                <!-- Geração 4 -->
-                <div class="generation">
-                    <div class="generation-title">Bisavós (Pai)</div>
-                    <div class="person">
-                        <img src="images/Vo Dede.jpg" alt="Bisavó 1">
-                        <span>Bisavó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/vo isabel.jpg" alt="Bisavó 2">
-                        <span>Bisavó 2</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/joaquim mota.jpg" alt="Bisavó 3">
-                        <span>Bisavó 3</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/Maria de Lourdes Mota.jpg" alt="Bisavó 4">
-                        <span>Bisavó 4</span>
-                    </div>
-                </div>
-
-                <!-- Geração 5 -->
-                <div class="generation">
-                    <div class="generation-title">Trisavós (Pai)</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 1">
-                        <span>Trisavó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 2">
-                        <span>Trisavó 2</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 3">
-                        <span>Trisavó 3</span>
-                    </div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Trisavó 4">
-                        <span>Trisavó 4</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/José Arimateia.jpg" alt="Trisavó 5">
-                        <span>Trisavó 5</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/Francisca casemira.jpg" alt="Trisavó 6">
-                        <span>Trisavó 6</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/vô conseição.jpg" alt="Trisavó 7">
-                        <span>Trisavó 7</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/vó conseição.jpg" alt="Trisavó 8">
-                        <span>Trisavó 8</span>
-                    </div>
-                </div>
-
-                <!-- Geração 6 -->
-                <div class="generation">
-                    <div class="generation-title">Tetravós (Pai)</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Tetravó 1">
-                        <span>Tetravó 1</span>
-                    </div>
-                    <div class="person">
-                        <img src="images/Alves.jpg" alt="Tetravó 2">
-                        <span>Tetravó 2</span>
-                    </div>
-                    <div class="person">...</div>
-                    <div class="person">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/983/914/non_2x/simple-user-default-icon-free-png.png"
-                            alt="Tetravó 32">
-                        <span>Tetravó 32</span>
-                    </div>
-                </div>
+    <dialog class="person-editor" id="photo-lightbox" aria-labelledby="editor-title">
+        <button class="lightbox-close" type="button" aria-label="Fechar editor">×</button>
+        <form class="editor-form">
+            <div class="editor-portrait-wrap">
+                <button class="editor-portrait-button" type="button" data-action="choose-photo"
+                    aria-label="Escolher foto">
+                    <img class="lightbox-image" alt="" hidden>
+                    <span class="editor-placeholder" aria-hidden="true">+</span>
+                </button>
+                <input class="editor-file visually-hidden" type="file" accept="image/jpeg,image/png,image/webp">
+                <button class="editor-upload" type="button" data-action="choose-photo">Escolher foto</button>
+                <button class="remove-photo" type="button" data-action="remove-photo" hidden>Remover foto</button>
             </div>
-        </div>
-    </div>
+            <div class="editor-fields">
+                <span class="editor-role" id="editor-role"></span>
+                <h2 id="editor-title">Editar pessoa</h2>
+                <label class="field-label">Nome
+                    <input class="editor-name" type="text" maxlength="100" placeholder="Nome da pessoa">
+                </label>
+                <label class="field-label">Descrição
+                    <textarea class="editor-description" maxlength="300" rows="3"
+                        placeholder="Uma lembrança ou detalhe..."></textarea>
+                </label>
+                <p class="editor-status" role="status" aria-live="polite"></p>
+                <button class="save-person" type="button" data-action="save">Salvar neste projeto</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>
